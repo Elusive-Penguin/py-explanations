@@ -1,9 +1,18 @@
 # Introduction into Python
 
 ## Contents
-1) [Built-ins](#built-ins)
+1) [Basics](#Basics)
+1) [Types](#Types)
+1) [Operators](#Operators)
+1) [Conditionals](#Conditionals)
+1) [Variables](#Variables)
+1) [Data Structures](#Data Structures)
+1) [Indexes](#Indexes)
+1) [Loops](#Loops)
+2) [Built-ins](#built-ins)
 2) [Try block](#try-block)
 3) 
+
 Strings and Comments
 Operators
 String Operators
@@ -41,8 +50,7 @@ Some other notes
 ```Python
 print("Hello world")
 ```
-
-# Coding: The basics
+# Basics
 Python is a programming language that enables the execution of user-writen code.
 Programming languages can differ greatly from each other. 
 Python uses simple syntax (the way in which the language is written) which makes it a great language to learn for beginners.
@@ -101,17 +109,19 @@ The numerical operators include
 * \*
 * \/
 * %
-\+ - * / all work as expected
+
+/+ - * / all work as expected
 
 '%' This is the modulo operator
 This does exist in mathematics but it is less common.
-The modulo can be thought of as the distance to the nearest divisor of a number
-for example, 5 % 2 (said five mod two) is = 1 (This is because 5 is 4+1 and 4 is divisible by two)
+The modulo can be thought of as the distance to the nearest divisor of a number. 
+For example, 5 % 2 (said five mod two) is = 1 (This is because 5 is 4+1 and 4 is divisible by two)
 ```Python
 assert 4 % 2 == 0
 assert 10 % 3 == 1
 ```
-Python also has a power operator: \*\*
+Python also has a power operator: "\*\*"
+
 Python is somewhat special in this sense, as not only is there a dedicated operator, it also functions completely as expected mathematically. 
 For example
 ```Python
