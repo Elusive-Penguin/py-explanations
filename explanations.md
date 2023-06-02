@@ -6,7 +6,7 @@
 1) [Operators](#Operators)
 1) [Conditionals](#Conditionals)
 1) [Variables](#Variables)
-1) [Data Structures](#Data Structures)
+1) [Data Structures](#Data-Structures)
 1) [Indexes](#Indexes)
 1) [Loops](#Loops)
 2) [Built-ins](#built-ins)
@@ -336,14 +336,15 @@ l = list(range(5))
 for x in l:
     print(x)
 ```
-As this code runs, the for loop takes the 
+As this code runs, the for loop takes the first value of the list and assigns this to x. Then, in this example, it prints the value of x.
+At the end of the block, if there are more items in 'l', x gets assigned the next time and the block of code is repeated. 
 
 This can be thought of in several ways.
 Firstly, imagine a bucket. That bucket is the container 'l'. Inside the bucket are all the contents of 'l'.
-the for loop is taking an item out of the bucket, performing some action with the item, and then it throws it away (outside of the bucket).
+the for loop is taking an item out of the bucket, performing some action with the item, and then it throws it away (putting it outside of the bucket).
 The for loop continues until the bucket is empty.
 
-For loops can be implemented within Python using the existing features of a while loop and "indexing". 
+Another approach would be to consider a for-loop as an incremental index. Implementing this idea using a while loop produces the code below.
 ```Python
 l = list(range(5)) # [0, 1, 2, 3, 4]
 i = 0
@@ -353,7 +354,7 @@ while i < len(l):
     i += 1
 ```
 However, this requires 4 additional lines over the existing for loop, and so it's clear why using "for" can be easier. 
-Using for over while is so much easier, in fact, that some people use it even when they don't need the item from the list!
+Using "for" over "while" is so much easier, in fact, that some people use it even when they don't need the item from the list!
 Let's say you want to print the same message 3 times. 
 ```Python
 i = 0
