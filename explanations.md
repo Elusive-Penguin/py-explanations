@@ -160,7 +160,7 @@ if assert is True then the code does nothing.
 If assert is False then it raises an AssertionError, a special type of error that says that whatever was after assert was false.
 The practical use of this is testing stages of a larger function (and finding when it doesn't meet your expectations).
 
-Python kindly evaluates expressions for us. With this, we can use a conditonal with assert
+Python kindly evaluates expressions for us. With this, we can use a conditional with assert
 ```Python
 1 + 1 == 2 # Evaluates to True
 assert 1+1 == 2 # Evaluates to True, and as previous, assert True continues 
@@ -279,6 +279,24 @@ The lists are not considered equal because the order of the lists does not match
 The order is preserved with an [Index](#indexes)
 Lists are generally used for homogenous data, although that is convention. 
 
+# Tuples
+A tuple is declared with '()' and is 
+1. Ordered 
+2. Immutable
+
+Similar to lists, elements of a tuple can be any object (int, str, functions, classes, lists) and where the order matters.
+However, tuples are immutable. They cannot be altered after initialisation.
+```Python
+t = (1, 2, 3)
+t2 = (3, 2, 1)
+assert t != t2 
+try: 
+    t[0] = 'a'
+except TypeError:
+    print("A tuple cannot be modified")
+print(t)
+```
+
 # Indexes
 When dealing with data structures indexes start at 0.
 If this is enough for you to understand how they work or at the very least to live with this fact you can continue on to the next section.
@@ -296,7 +314,7 @@ Having access to a range of numbers 0 -> 2^n-1^ actually allows you access to 2^
 # Loops
 Loops are blocks of code that repeatedly execute until some condition is met.
 ## While loops
-while loops are if statements which repeatedly check their condition until it is false.
+while loops are if statements which repeatedly check a boolean condition until it is false.
 Consider the if statement below
 ```Python
 x = int(input("Enter a number")
@@ -330,7 +348,7 @@ This creates an infinite loop which will never end without cancelling (Control-C
 
 ## For loops
 
-For loops iterate over each item in a container.
+For loops iterate over each item in a container. They stop when they've looped over the last item, or, in other words, they loop len(List) times. 
 ```Python
 l = list(range(5))
 for x in l:
